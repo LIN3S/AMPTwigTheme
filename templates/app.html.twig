@@ -8,7 +8,7 @@
 #}
 
 <!doctype html>
-<html ⚡>
+<html ⚡ {% block html_attributes %}{% endblock %}>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
@@ -28,10 +28,10 @@
     {%- block extensions -%}{% include '@AMP/partials/extensions.html.twig' %}{%- endblock extensions -%}
 </head>
 <body class="body">
-    {%- block sidebar -%}{%- endblock sidebar -%}
-    <div class="content">
-        {%- block content -%}{%- endblock content -%}
-    </div>
-    {%- block analytics -%}{%- endblock analytics -%}
+{%- block sidebar -%}{%- endblock sidebar -%}
+<div class="content">
+    {%- block content -%}{%- endblock content -%}
+</div>
+{%- block analytics -%}{%- endblock analytics -%}
 </body>
 </html>
